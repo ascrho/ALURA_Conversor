@@ -1,0 +1,20 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		boolean flag = true;
+		
+		while(flag) {
+			//JOptionPane.showInputDialog, crear un cuadro de dialogo, almacena la opcion en la variable opciones
+			//Requiere (ComponentePadre, se dejo en null)(Texto dentro de la caja)(JOptionPane.QUESTION_MESSAGE, clase estatica que retorna un int)(icono quedo en null) (Arreglo Object con las opciones) (Seleccion, como primer)
+			String opciones = (JOptionPane.showInputDialog(null,"Seleccione un opcion de conversión:","Menu",JOptionPane.QUESTION_MESSAGE,null,new Object[] {"Conversor 1","Conversor 2"},"Conversor 1")).toString();
+			
+		}
+		
+	}
+	
+}

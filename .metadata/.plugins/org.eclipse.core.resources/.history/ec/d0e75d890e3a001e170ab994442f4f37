@@ -1,0 +1,19 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		boolean flag = true;
+		
+		while(flag) {
+			
+			String opciones = (JOptionPane.showInputDialog(null,"Seleccione un opcion de conversión:","Menu",JOptionPane.QUESTION_MESSAGE,new Object[] {"Conversor 1","Conversor 2"}));
+			
+		}
+		
+	}
+	
+}

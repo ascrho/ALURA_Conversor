@@ -1,0 +1,75 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		function monedas = new function();
+		boolean flag = true;
+		
+		while(flag) {
+			//JOptionPane.showInputDialog, crear un cuadro de dialogo, almacena la opcion en la variable opciones
+			//Requiere (ComponentePadre, se dejo en null)(Texto dentro de la caja)(JOptionPane.QUESTION_MESSAGE, clase estatica que retorna un int, agrega la opcion cancel)(icono quedo en null) 
+			//(Arreglo Object con las opciones) (Conversor 1, como primera seleccion), por ultimo toString(), para convertir la opcion seleccionada en una cadena de texto que se almacena en la variable
+			String opciones = (JOptionPane.showInputDialog(null,"Seleccione un opción de conversión:","Menu",JOptionPane.QUESTION_MESSAGE,null
+					,new Object[] {"Conversor de moneda","Conversor 2"},"Conversor de moneda")).toString();
+			
+			switch(opciones) {
+			
+			case "Conversor de moneda":
+				//Muestra un mensaje al usuario
+				String input = JOptionPane.showInputDialog("Ingrese la cantidad de dinero que desea convertir:");
+				//Valida si lo ingresado por el usuario es un numero
+				if (ValidarNumero(input)) {
+					//Si es un numero, castea el string a un double
+					double Minput = Double.parseDouble(input);
+					//Llama al metodo ConvertirMonedas
+					monedas.ConvertirMonedas(Minput);
+					
+					//Cuando finaliza el metodo ConvertirMonedas, rpegunta si se desea realizar otra operacion
+					//Almacena el valor en respuesta
+					int respuesta = JOptionPane.showConfirmDialog(null, "Desea realizar otra operación?");
+					if (JOptionPane.OK_OPTION == respuesta) {
+						System.out.println("Selecciona opción Afirmativa");
+					} else {
+						System.out.println("Programa terminado.");
+					}
+				} else {
+					System.out.println("Valor invalido");
+				}
+				break;
+				
+			case "Conversor 2":
+				System.out.println("2");
+				
+			}
+			
+		}
+		
+	}
+
+	///////////////////////////////////////
+	//METODOS
+	///////////////////////////////////////
+	
+	//Este metodo permite valdiar que el caracter ingresado no es un letra
+	public static boolean ValidarNumero(String input) {
+		
+		try {
+			double x = Double.parseDouble(input);
+			//El doble pipe indica que, si la condicion 1 es cierta, no pasa a la segunda
+			//Admite positvos o negativos, pero solo numeros
+			if(x >= 0 || x < 0);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		
+		
+	}
+	
+
+	
+}

@@ -1,0 +1,34 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class ConvertirPesos {
+
+	public void ConvertirKilosAGramos(int valor) {
+		//Realiza la conversion
+		double kiloGramos = valor*720;
+		//Redondea a traves de la clase Math
+		kiloGramos = (double) Math.round(kiloGramos*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Meses equivalen a "+kiloGramos+" Horas.");
+	}
+	
+	public void ConvertirLibrasAGramos(int valor) {
+		//Realiza la conversion
+		double libraGramos = valor*8760;
+		//Redondea a traves de la clase Math
+		libraGramos = (double) Math.round(libraGramos*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Años equivalen a "+libraGramos+" Horas.");
+	}
+	
+	public void ConvertirOnzasAGramos(int valor) {
+		//Realiza la conversion
+		double onzaGramos = valor*24;
+		//Redondea a traves de la clase Math
+		onzaGramos = (double) Math.round(onzaGramos*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Dias equivalen a "+onzaGramos+" Minutos.");
+	}
+	
+}

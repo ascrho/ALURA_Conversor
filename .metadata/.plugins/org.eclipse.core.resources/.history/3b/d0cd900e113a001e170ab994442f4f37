@@ -1,0 +1,50 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		boolean flag = true;
+		
+		while(flag) {
+			//JOptionPane.showInputDialog, crear un cuadro de dialogo, almacena la opcion en la variable opciones
+			//Requiere (ComponentePadre, se dejo en null)(Texto dentro de la caja)(JOptionPane.QUESTION_MESSAGE, clase estatica que retorna un int, agrega la opcion cancel)(icono quedo en null) 
+			//(Arreglo Object con las opciones) (Conversor 1, como primera seleccion), por ultimo toString(), para convertir la opcion seleccionada en una cadena de texto que se almacena en la variable
+			String opciones = (JOptionPane.showInputDialog(null,"Seleccione un opción de conversión:","Menu",JOptionPane.QUESTION_MESSAGE,null,new Object[] {"Conversor de moneda","Conversor 2"},"Conversor de moneda")).toString();
+			
+			switch(opciones) {
+			
+			case "Conversor de moneda":
+				String input = JOptionPane.showInputDialog("Ingrese la cantidad de dinero que desea convertir:");
+			
+				if (ValidarNumero(input)) {
+					double Minput = Double.parseDouble(input);
+				}
+				
+			case "Conversor 2":
+				System.out.println("2");
+				
+			}
+			
+		}
+		
+	}
+
+	public static boolean ValidarNumero(String input) {
+		
+		try {
+			double x = Double.parseDouble(input);
+			if(x >= 0 || x < 0);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		
+		
+	}
+	
+
+	
+}

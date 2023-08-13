@@ -1,0 +1,34 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class ConvertirPeso {
+
+	public void ConvertirKilosAGramos(double valor) {
+		//Realiza la conversion
+		double kiloGramos = valor*1000;
+		//Redondea a traves de la clase Math
+		kiloGramos = (double) Math.round(kiloGramos*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Kilos equivalen a "+kiloGramos+" Gramos.");
+	}
+	
+	public void ConvertirLibrasAGramos(double valor) {
+		//Realiza la conversion
+		double libraGramos = valor*453.59237;
+		//Redondea a traves de la clase Math
+		libraGramos = (double) Math.round(libraGramos*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Libras equivalen a "+libraGramos+" Gramos.");
+	}
+	
+	public void ConvertirOnzasAGramos(double valor) {
+		//Realiza la conversion
+		double onzaGramos = valor*28.3495231;
+		//Redondea a traves de la clase Math
+		onzaGramos = (double) Math.round(onzaGramos*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Onzas equivalen a "+onzaGramos+" Gramos.");
+	}
+	
+}

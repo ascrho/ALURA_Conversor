@@ -1,0 +1,35 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class ConvertirTiempo {
+
+	
+	public void ConvertirMesesAHoras(double valor) {
+		//Realiza la conversion
+		double mesesHora = valor*720;
+		//Redondea a traves de la clase Math
+		mesesHora = (double) Math.round(mesesHora*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Meses equivalen a "+mesesHora+" Horas.");
+	}
+	
+	public void ConvertirAñosAHoras(double valor) {
+		//Realiza la conversion
+		double añoHora = valor*8760;
+		//Redondea a traves de la clase Math
+		añoHora = (double) Math.round(añoHora*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Años equivalen a "+añoHora+" Horas.");
+	}
+	
+	public void ConvertirDiasAMinutos(double valor) {
+		//Realiza la conversion
+		double diasMinutos = valor*1440;
+		//Redondea a traves de la clase Math
+		diasMinutos = (double) Math.round(diasMinutos*100d)/100;
+		//Muestra un mensaje con el resultado
+		JOptionPane.showMessageDialog(null, valor+" Dias equivalen a "+diasMinutos+" Minutos.");
+	}
+	
+}

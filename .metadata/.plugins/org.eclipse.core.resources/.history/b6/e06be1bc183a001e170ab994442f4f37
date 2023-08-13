@@ -1,0 +1,25 @@
+package main;
+
+import javax.swing.JOptionPane;
+
+public class function {
+	
+	ConvertirMonedas monedas = new ConvertirMonedas();
+	//ConvertirMonedasAPesos pesos = new ConvertirMonedasAPesos();
+	
+	public void ConvertirMonedas(Double Minput) {
+		String opcion = (JOptionPane.showInputDialog(null,"Elije la moneda a la que deseas convertir tu dinero","Monedas",JOptionPane.QUESTION_MESSAGE,null
+			   ,new Object[] {"De Pesos Chilenos a Dolar","De Pesos Chilenos a Euro"},"De Pesos Chilenos a Dolar")).toString();
+		
+		switch(opcion) {
+		case "De Pesos Chilenos a Dolar":
+			monedas.ConvertirPesosChilenosADolares(Minput);
+			break;
+		
+		case "De Pesos Chilenos a Euro":
+			monedas.ConvertirPesosChilenosAEuros(Minput);
+			break;
+		}
+	}
+
+}
